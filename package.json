@@ -1,0 +1,17 @@
+{
+  "name": "cloud_controls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "styles": "sass styles.scss styles.css -w"
+  },
+  "author": "KarstenBuckstegge",
+  "license": "MIT",
+  "dependencies": {
+    "@serialport/parser-readline": "latest",
+    "sass": "^1.63.6",
+    "serialport": "latest",
+    "ws": "latest"
+  }
+}

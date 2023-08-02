@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100vh;
+  background: black;
+}
+
+body {
+  overflow: hidden;
+}
+
 .container {
   position: relative;
   width: 100vw;
@@ -18,6 +28,7 @@
   width: 100%;
   opacity: 0;
   transition: opacity 1s linear;
+  transform: scaleY(0.8);
 }
 
 .video--show {

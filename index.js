@@ -57,6 +57,8 @@ const newPhoneInput = (input) => {
 
   if (input.includes("hungUp") || input.includes("lifted")) {
     console.log(input);
+  } else if (numInput === 0) {
+    runAnimation(10);
   } else if (numInput < videos.length + 1) {
     runAnimation(numInput);
   } else {
@@ -68,7 +70,7 @@ const connectToWebsocket = () => {
   socket = new WebSocket("ws://localhost:3000");
 
   socket.onopen = () => console.log("connected to", socket);
-  socket.onerror = (err) => console.error("WebSocket error", err);
+  socket.onerror = (err) => console.log("WebSocket error", err);
 
   socket.onmessage = (message) => newPhoneInput(message.data);
 };
